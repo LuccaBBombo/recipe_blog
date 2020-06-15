@@ -1,39 +1,52 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+#YourCookBook
+This is a web application where people can share their families recipes as well as those who want to find out new recipes to try at home. In our application, anyone can post their recipes and give a little description on how this recipe came to be known by them and why they love is so much!
 
-Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+##UX
+In the application we developed we wish to make finding new and interesting recipes fun and exciting. We created a system where it is very easy for the user to search for recipes they want and also making it simple to add your own recipes for other people to enjoy. You can sort recipes based on various aspects making it easier to find recipes that are within your interest.
 
-## Gitpod Reminders
+###User Stories
+As a user I wish to find new recipes in an easy and uncomplicated manner.
+As a user I wish to post a recipe so that other people can cook it.
+As a user, I want to find a recipes that are cooked with vegan ingredients only.
+As a user, I want to find a recipes that are vegetarian.
+As a user, I want to find a recipes that are gluten-free.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[Mockup](https://e68605ea-a604-43ea-8e9e-47ae6d40f018.ws-eu01.gitpod.io/files/download/?id=d0770254-aa08-4d5c-b0af-3fab3a59718e)
 
-`python3 -m http.server`
+##Features
+Users are able to post a overall review of the website on the Home page. 
+Users can sort recipes based on certain aspects.
+Users can post reviews about the recipes they tried.
+User can contact the webapp developers through the Contact page.
 
-A blue button should appear to click: *Make Public*,
+##Existing Features
+Feature 1 - Allows users to achieve post a overall review of the website, by having them fill out the Review form in the Home page and clicking the "Post Review" button.
+Feature 2 - Allows users to sort recipes based on certain aspects by clicking the "Sort by" collapsible making it easier to find recipes that interests them.
+Feature 3 - Users can post reviews on the recipes they want, by entering the wanted recipe page and filling out the review form and clicking on the "Submit" button.
+Feature 4 - Users can contact the developers if they have any doubts by filling out the contact form on the Contact page
 
-Another blue button should appear to click: *Open Browser*.
+##Features Left to Implement
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: *Make Public*,
+##Technologies Used
 
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
+[Python]()
 --------
+[JavaScript]()
 
-Happy coding!
+[Flask]()
+
+[MongoDB]()
+
+##Testing
+
+##Deployment
+
+##Credits
+
+###Content
+
+
+###Media
+
