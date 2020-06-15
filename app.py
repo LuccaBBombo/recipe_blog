@@ -5,7 +5,8 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'data_centric'
-app.config["MONGO_URI"] = ''
+app.config["MONGO_URI"] = 'MONGO_URI'
+
 
 mongo = PyMongo(app)
 
@@ -14,6 +15,10 @@ mongo = PyMongo(app)
 def home():
     return render_template('home.html')
 
+
+@app.route('/recipes')
+def recipes():
+    return render_template('recipes.html', recipes=mongo.db.recipes.find())
 
 
 if __name__ == '__main__':
