@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
     {% for recipe in recipes %}
-        {{recipe.recipe_name}}
-        {{recipe.recipe_description}}
-        {{recipe.recipe_time}}
+    <div class="card" style="width: 12rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='img/YourCookBookLogo.jpg')}}" alt="Card image cap">
+        <div class="card-body">
+            <a class="card-title">{{recipe.recipe_name}}</a>
+            <h6 class="card-subtitle mb-2 text-muted">{{recipe.recipe_time}}  {{recipe.recipe_servings}}</h6>
+            <p class="card-text">{{recipe.recipe_description}}</p>
+        </div>
+    </div>
     {% endfor %}
 {% endblock %}

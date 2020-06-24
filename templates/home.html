@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class= "container-fluid">
-        <div class="row">  
-            <p>We are here to help people all around the world to connect and share their food adventures 
+    <div class= "jumbotron">
+        <div class="row center">  
+            <p class = "intro-text">We are here to help people all around the world to connect and share their food adventures 
             with other food enthusiasts who are ready to try new and exciting recipes to cook for their friends and family.
-            In the interest of making this a pleasant and intuitive experience, we designed a website where you can post you recipe easy and uncomplicated.
-            You can add your own recipes and help out our community by also giving your thoughts and ideas about the recipes you have tried. 
-            What are you waiting for? Let's get cooking!
+            </p>
+            <p class = "intro-text">
+            <strong>What are you waiting for? Let's get cooking!</strong>
             </p>
         </div>
+    </div>    
         <div class ="row">
+            <p>Hey there, we would love your feedback to know what you think and how we could improve your experience in our site</p>
             <form>
                 <div class="form-group">
                     <label for="user_name">Name</label>
@@ -22,5 +24,4 @@
                 <button type="submit" class="btn btn-primary">Post review</button>
             </form>
         </div>
-    </div>
 {% endblock %} 
