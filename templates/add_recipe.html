@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Add recipe</h3>
+<form action="" mehtod="POST">
+  <div class="form-group">
+    <label for="recipename"><span class="material-icons">create</span>Recipe Name</label>
+    <input type="text" class="form-control" id="recipe_title" name="recipe_title" placeholder="Please provide the recipe name..." required="true">
+  </div>
+  <div class="form-group">
+    <label for="recipedescription"><span class="material-icons">insert_comment</span>Recipe Description</label>
+    <textarea class="form-control" id="recipe_description" name="recipe_description" rows="2" placeholder="Please provide a brief recipe description..." required="true"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="categoryname"><span class="material-icons">table_rows</span>Recipe Category</label>
+    <select class="form-control" id="category" name="category_name" required="true">
+      <option value="" disabled selected>Please choose recipe category</option>
+      {% for cat in categories %}
+        <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="recipe_ingredients"><span class="material-icons">list</span>Ingredients</label>
+    <textarea class="form-control" id="recipe_ingredients" name="recipe_ingredients" rows="4" placeholder="Please provide the recipe ingredients..." required="true"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="recipe_method"><span class="material-icons">content_paste</span>Cooking Method</label>
+    <textarea class="form-control" id="recipe_prepare_method" name="recipe_prepare_method" rows="4" placeholder="Please provide the recipe cooking method..." required="true"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="recipetime"><span class="material-icons">access_time</span>Preparation Time</label>
+    <input type="number" class="form-control" id="recipe_cooking_time" name="recipe_cooking_time" placeholder="Please provide the preparation time in minutes(Ex:120)" required="true">
+  </div>
+  <div class="form-group">
+    <label for="recipeservings"><span class="material-icons">groups</span>Recipe servings</label>
+    <input type="number" class="form-control" id="recipe_serving" name="recipe_serving" placeholder="Please provide the number of people the recipe serves(Ex:5)" required="true">
+  </div>
+  <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="is_vegan" name="is_vegan">
+  <label class="form-check-label" for="recipevegan">
+    Vegan
+  </label>
+  <input class="form-check-input" type="checkbox" value="" id="is_vegetarian" name="is_vegetarian">
+  <label class="form-check-label" for="recipevegetarian">
+    Vegetarian
+  </label>
+  <input class="form-check-input" type="checkbox" value="" id="is_gluten_free" name="is_gluten_free">
+  <label class="form-check-label" for="recipeglutenfree">
+    Gluten Free
+  </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Add Recipe <span class="material-icons">playlist_add</span></button>
+</form>
+
+
+{% endblock %}
