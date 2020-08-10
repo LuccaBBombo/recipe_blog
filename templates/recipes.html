@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for recipe in recipes %}
-    <div class="card" style="width: 12rem;">
-        <img class="card-img-top" src="{{url_for('static', filename='img/YourCookBookLogo.jpg')}}" alt="Card image cap">
-        <div class="card-body">
-            <a class="card-title">{{recipe.recipe_name}}</a>
-            <h6 class="card-subtitle mb-2 text-muted">{{recipe.recipe_time}}  {{recipe.recipe_servings}}</h6>
-            <p class="card-text">{{recipe.recipe_description}}</p>
-        </div>
+    <div class="row">
+        {% for recipe in recipes %}
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{url_for('static', filename='img/YourCookBookLogo.jpg')}}">
+                        <a href="{{url_for('show_recipe', recipe_id=recipe._id)}}" class="card-title">{{recipe.recipe_title}}</a>
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 {% endblock %}
+

@@ -19,9 +19,11 @@ def home():
 def recipes():
     return render_template('recipes.html', recipes=mongo.db.recipes.find())
 
+
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template('add_recipe.html', categories=mongo.db.categories.find())
+    return render_template('add_recipe.html',
+                           categories=mongo.db.categories.find())
 
 
 @app.route('/insert_recipe', methods=['POST'])
@@ -31,8 +33,12 @@ def insert_recipe():
     return redirect(url_for('recipes'))
 
 
+@app.route('/show_recipe/<recipe_id>')
+def show_recipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("recipe_page.html", recipe=the_recipe)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')), debug=True)
-
-
