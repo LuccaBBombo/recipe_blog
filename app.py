@@ -35,6 +35,12 @@ def insert_recipe():
 
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
+    # find the recipe with the id
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    # get the ingredients from it
+    recipe_ing = recipe['recipe_ingredients']
+    ingredients_list = recipe_ing.split("/")
+    print(f"The ingredients field looks like this {ingredients_list}")
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipe_page.html", recipe=the_recipe)
 
