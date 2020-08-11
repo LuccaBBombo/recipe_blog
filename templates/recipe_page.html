@@ -9,7 +9,9 @@
     <div class="row" >
         <h3>Ingredients </h3>
         <hr>
-        <p>{{ recipe.recipe_ingredients }} </p>
+        {% for ingredient in recipe_ingredients %} 
+            <p>- {{ recipe.recipe_ingredients }}</p>
+        {% endfor %}
     </div>
     <div class="row" >
         <h3>Cooking method</h3>
@@ -27,16 +29,34 @@
     <div class="row" >
         <p>{{ recipe.is_vegan }}  {{ recipe.is_vegetarian }} {{ recipe.is_gluten_free }}</p>
     </div>
-
-
+</div>
+<div class="row center" >
+    <p>Want to share your thoughts on the recipe or give any ideas to your fellow food ethusiasts?</p>
+</div>
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Name</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">comment</i>
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Write your review of the recipe...</label>
+            </div>
+            <div class="row center">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Post Review
+                <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+    </form>
 </div>
 {% endblock %}
-
-recipe_description
-recipe_ingredients
-recipe_prepare_method
-recipe_cooking_time
-recipe_serving
-is_vegan
-is_vegetarian
-is_gluten_free

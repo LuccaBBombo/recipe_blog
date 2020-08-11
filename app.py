@@ -37,12 +37,12 @@ def insert_recipe():
 def show_recipe(recipe_id):
     # find the recipe with the id
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    # get the ingredients from it
-    recipe_ing = recipe['recipe_ingredients']
-    ingredients_list = recipe_ing.split("/")
-    print(f"The ingredients field looks like this {ingredients_list}")
+    # get the ingredients from it and split the string into a list
+    recipe_ing = recipe['recipe_ingredients'].split('/')
+    print(f"The ingredients field looks like this {recipe_ing}")
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("recipe_page.html", recipe=the_recipe)
+    return render_template("recipe_page.html", recipe=the_recipe,
+                           recipe_ingredients=recipe_ing)
 
 
 if __name__ == '__main__':
