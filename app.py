@@ -39,10 +39,11 @@ def show_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     # get the ingredients from it and split the string into a list
     recipe_ing = recipe['recipe_ingredients'].split('/')
-    print(f"The ingredients field looks like this {recipe_ing}")
+    recipe_cook = recipe['recipe_prepare_method'].split('/')
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipe_page.html", recipe=the_recipe,
-                           recipe_ingredients=recipe_ing)
+                           recipe_ingredients=recipe_ing,
+                           recipe_method=recipe_cook)
 
 
 if __name__ == '__main__':
