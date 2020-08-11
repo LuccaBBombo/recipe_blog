@@ -9,9 +9,11 @@
     <div class="row" >
         <h3>Ingredients </h3>
         <hr>
+        <ul>
         {% for ingredient in recipe_ingredients %} 
-            <p>- {{ recipe.recipe_ingredients }}</p>
+            <li>- {{ ingredient }}</li>
         {% endfor %}
+        </ul>
     </div>
     <div class="row" >
         <h3>Cooking method</h3>
