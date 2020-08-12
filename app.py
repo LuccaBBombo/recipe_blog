@@ -33,17 +33,26 @@ def insert_recipe():
     return redirect(url_for('recipes'))
 
 
+@app.route('/insert_review', methods=['POST'])
+def insert_review():
+    reviews = mongo.db.reviews
+    reviews.insert_one(request.form.to_dict())
+    return redirect(url_for('recipes'))
+
+
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
     # find the recipe with the id
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     # get the ingredients from it and split the string into a list
     recipe_ing = recipe['recipe_ingredients'].split('/')
+    # get the cooking method from it and split the string into a list
     recipe_cook = recipe['recipe_prepare_method'].split('/')
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("recipe_page.html", recipe=the_recipe,
                            recipe_ingredients=recipe_ing,
-                           recipe_method=recipe_cook)
+                           recipe_method=recipe_cook,
+                           reviews=mongo.db.reviews.find())
 
 
 if __name__ == '__main__':
