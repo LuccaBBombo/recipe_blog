@@ -22,8 +22,7 @@ def recipes():
 
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template('add_recipe.html',
-                           categories=mongo.db.categories.find())
+    return render_template('add_recipe.html', categories=mongo.db.categories.find())
 
 
 @app.route('/insert_recipe', methods=['POST'])
@@ -33,8 +32,9 @@ def insert_recipe():
     return redirect(url_for('recipes'))
 
 
-@app.route('/insert_review', methods=['POST'])
-def insert_review():
+@app.route('/insert_review/<recipe_id>', methods=['POST'])
+def insert_review(recipe_id):
+    recipe_id = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     reviews = mongo.db.reviews
     reviews.insert_one(request.form.to_dict())
     return redirect(url_for('recipes'))

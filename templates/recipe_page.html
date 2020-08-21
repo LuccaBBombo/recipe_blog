@@ -1,67 +1,67 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="row">
-    <div class="row" >
-        <h2>{{ recipe.recipe_title }} </h2>
-        <hr>
-        <p>{{ recipe.recipe_description }} </p>
+    <div class="row">
+        <div class="row" >
+            <h2>{{ recipe.recipe_title }} </h2>
+            <hr>
+            <p>{{ recipe.recipe_description }} </p>
+        </div>
+        <div class="row" >
+            <h3>Ingredients </h3>
+            <hr>
+            <ul>
+            {% for ingredient in recipe_ingredients %} 
+                <li>- {{ ingredient }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="row" >
+            <h3>Cooking method</h3>
+            <hr>
+            {% for method in recipe_method %} 
+                <p> {{ method }}</p>
+            {% endfor %}
+        </div>
+        <div class="row" >
+            <div class="col s12 m6">
+                <p><strong>Cooking time:</strong> {{ recipe.recipe_cooking_time }} Minutes </p>
+            </div>
+            <div class="col s12 m6">
+            <p><strong>Portions serving:</strong> {{ recipe.recipe_serving }} Portions </p>
+            </div>
+        </div>
+        <div class="row" >
+            <p>{{ recipe.is_vegan }}  {{ recipe.is_vegetarian }} {{ recipe.is_gluten_free }}</p>
+        </div>
     </div>
-    <div class="row" >
-        <h3>Ingredients </h3>
-        <hr>
-        <ul>
-        {% for ingredient in recipe_ingredients %} 
-            <li>- {{ ingredient }}</li>
+    <div class="row center" >
+        <p>Want to share your thoughts on the recipe or give any ideas to your fellow food ethusiasts?</p>
+    </div>
+    <div class="row">
+        <form action="{{url_for('insert_review', recipe_id=recipe._id)}}" method="POST" class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="user_name" name="user_name" type="text" class="validate">
+                    <label for="icon_prefix">Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">comment</i>
+                    <textarea id="user_review" name="user_review" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Write your review of the recipe...</label>
+                </div>
+                <div class="row center">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Post Review
+                    <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        {% for review in reviews %} 
+            <p> <strong>{{ review.user_name }}</strong></p>
+            <p> {{ review.user_review }}</p>
         {% endfor %}
-        </ul>
     </div>
-    <div class="row" >
-        <h3>Cooking method</h3>
-        <hr>
-        {% for method in recipe_method %} 
-            <p> {{ method }}</p>
-        {% endfor %}
-    </div>
-    <div class="row" >
-        <div class="col s12 m6">
-            <p> {{ recipe.recipe_cooking_time }} Minutes </p>
-        </div>
-        <div class="col s12 m6">
-        <p> {{ recipe.recipe_serving }} Portions </p>
-        </div>
-    </div>
-    <div class="row" >
-        <p>{{ recipe.is_vegan }}  {{ recipe.is_vegetarian }} {{ recipe.is_gluten_free }}</p>
-    </div>
-</div>
-<div class="row center" >
-    <p>Want to share your thoughts on the recipe or give any ideas to your fellow food ethusiasts?</p>
-</div>
-<div class="row">
-    <form action="{{url_for('insert_review')}}" method="POST" class="col s12">
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="user_name" name="user_name" type="text" class="validate">
-                <label for="icon_prefix">Name</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">comment</i>
-                <textarea id="user_review" name="user_review" class="materialize-textarea"></textarea>
-                <label for="textarea1">Write your review of the recipe...</label>
-            </div>
-            <div class="row center">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Post Review
-                <i class="material-icons right">send</i>
-                </button>
-            </div>
-        </div>
-    </form>
-</div>
-<div class="row">
-    {% for review in reviews %} 
-        <p> <strong>{{ review.user_name }}</strong></p>
-        <p> {{ review.user_review }}</p>
-    {% endfor %}
-</div>
 {% endblock %}
