@@ -1,6 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="row">
+        <form action="{{url_for('search')}}" method="POST" class="col s12">
+            <div class="input-field col s12 m8">
+                <select name="query" id="query">
+                <option value="" disabled selected>Choose Recipe Category</option>
+                {% for cat in categories %}
+                    <option value="{{cat.category_name}}" >{{cat.category_name}}</option>
+                {% endfor %}
+                </select>
+                <label for="query">Filter Recipes</label>
+            </div>
+            <div class="col s12 m4">
+                <a href="{{url_for('recipes')}}" class="grey btn text-shadow">Reset</a>
+                <button class="btn waves-effect waves-light deep-orange" type="submit" name="action">Submit
+                <i class="material-icons right">search</i>
+                </button>
+            </div>
+        </form>
+       </div> 
+    <div class="row">
         {% for recipe in recipes %}
             <div class="col s12 m4">
                 <div class="card">
@@ -9,8 +28,8 @@
                         <p class="card-title">{{recipe.recipe_title}}</p>
                     </div>
                     <div class="card-content">
-                        <p>{{recipe.recipe_callout}}</p>
-                        <a href="{{url_for('show_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light grey darken-2 btn"><i class="material-icons right">chevron_right</i>Open Recipe</a>
+                        <p class ="callout">{{recipe.recipe_callout}}</p>
+                        <a href="{{url_for('show_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light deep-orange btn"><i class="material-icons right">chevron_right</i>Open Recipe</a>
                     </div>
                 </div>
             </div>

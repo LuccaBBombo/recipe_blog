@@ -1,6 +1,13 @@
-.text-logo {
+.text-bungee {
     font-family: 'Bungee Inline', cursive;
+    color:#ff5722 ;
 };
 
+.callout{
+    margin-bottom: 6px;
+}
 
+.text-link{
+    color:#ff5722 ;
+}
 

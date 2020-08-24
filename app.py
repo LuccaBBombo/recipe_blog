@@ -9,6 +9,7 @@ app.config["MONGO_URI"] = os.environ['MONGO_URI']
 
 mongo = PyMongo(app)
 
+#---------------------Recipes--------------------------------------------
 
 @app.route('/')
 def home():
@@ -17,12 +18,22 @@ def home():
 
 @app.route('/recipes')
 def recipes():
-    return render_template('recipes.html', recipes=mongo.db.recipes.find())
+    return render_template('recipes.html', recipes=mongo.db.recipes.find(),
+                           categories=mongo.db.categories.find())
+
+
+@app.route('/search', methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = mongo.db.recipes.find({"$text": {"$search": query}})
+    return render_template('recipes.html', recipes=recipes,
+                           categories=mongo.db.categories.find())
 
 
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template('add_recipe.html', categories=mongo.db.categories.find())
+    return render_template('add_recipe.html',
+                           categories=mongo.db.categories.find())
 
 
 @app.route('/insert_recipe', methods=['POST'])

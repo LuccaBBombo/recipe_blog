@@ -2,12 +2,13 @@
 {% block content %}
     <div class="row">
         <div class="row" >
-            <h2>{{ recipe.recipe_title }} </h2>
+            <h2 class="text-bungee">{{ recipe.recipe_title }} </h2>
             <hr>
+            
             <p>{{ recipe.recipe_description }} </p>
         </div>
         <div class="row" >
-            <h3>Ingredients </h3>
+            <h3 class="text-bungee">Ingredients </h3>
             <hr>
             <ul>
             {% for ingredient in recipe_ingredients %} 
@@ -16,7 +17,7 @@
             </ul>
         </div>
         <div class="row" >
-            <h3>Cooking method</h3>
+            <h3 class="text-bungee">Cooking method</h3>
             <hr>
             {% for method in recipe_method %} 
                 <p> {{ method }}</p>
@@ -24,10 +25,10 @@
         </div>
         <div class="row" >
             <div class="col s12 m6">
-                <p><strong>Cooking time:</strong> {{ recipe.recipe_cooking_time }} Minutes </p>
+                <p class="text-bungee">Cooking time: </p><span>{{ recipe.recipe_cooking_time }} Minutes</span>
             </div>
             <div class="col s12 m6">
-            <p><strong>Portions serving:</strong> {{ recipe.recipe_serving }} Portions </p>
+            <p class="text-bungee"> Servings:  </p> <span>{{ recipe.recipe_serving }} Portions</span>
             </div>
         </div>
         <div class="row" >
@@ -54,7 +55,7 @@
                     <label for="textarea1">Write your review of the recipe...</label>
                 </div>
                 <div class="row center">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Post Review
+                    <button class="btn waves-effect waves-light deep-orange" type="submit" name="action">Post Review
                     <i class="material-icons right">send</i>
                     </button>
                 </div>
