@@ -15,7 +15,7 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
 *As a user, I want to be able to filter the results so I can find recipes that interest me in a fast and easy manner.
 *As a user, I want to be able to review other people recipes and give them different.
 
-[Mockup](https://e68605ea-a604-43ea-8e9e-47ae6d40f018.ws-eu01.gitpod.io/files/download/?id=d0770254-aa08-4d5c-b0af-3fab3a59718e)
+[Mockup](mockup/recipe_website.pdf)
 
 ## Features 
 *Users can sort recipes based on certain aspects.
