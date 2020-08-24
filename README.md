@@ -56,17 +56,17 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
     1. Try to submit the form with an empty input field and verify that a relevant error message appears.
     1. Try to submit the form with all inputs valid and verify that the form reloads, meaning that the form was correctly sent.
 2. Add your recipe form
-    2. Go to the 'Add your own recipe' page
-    2. Try to submit the empty form and verify that an error message about the required fields appears.
-    2. Try to submit the form with an invalid email address and verify that a relevant error message appears.
-    2. Try to submit the form with an empty input field and verify that a relevant error message appears.
-    2. Try to submit the form with all inputs valid and verify that the form is sent and you are redirected to the 'Recipes' page. 
+    1. Go to the 'Add your own recipe' page
+    1. Try to submit the empty form and verify that an error message about the required fields appears.
+    1. Try to submit the form with an invalid email address and verify that a relevant error message appears.
+    1. Try to submit the form with an empty input field and verify that a relevant error message appears.
+    1. Try to submit the form with all inputs valid and verify that the form is sent and you are redirected to the 'Recipes' page. 
 3. Add your recipe form
-    3. Go to a recipe page
-    3. Try to submit the empty form and verify that an error message about the required fields appears.
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears.
-    3. Try to submit the form with an empty input field and verify that a relevant error message appears.
-    3. Try to submit the form with all inputs valid and verify that the form is sent and you are redirected to the 'Recipes' page. 
+    1. Go to a recipe page
+    1. Try to submit the empty form and verify that an error message about the required fields appears.
+    1. Try to submit the form with an invalid email address and verify that a relevant error message appears.
+    1. Try to submit the form with an empty input field and verify that a relevant error message appears.
+    1. Try to submit the form with all inputs valid and verify that the form is sent and you are redirected to the 'Recipes' page. 
 
 ### Deployment
 * The HTML and CSS files were tested by using the W3C Mark Validator Service by direct input of the files on the validator.
