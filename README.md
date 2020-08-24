@@ -30,8 +30,8 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
 * Feature 4 - Users can post their own recipes to share with the website community.
 
 ## Future Features
-*Users will be able to upload their own images of their recipe.
-*Create a page where the best recipes will be made by the website team, displaying different techniques and equipments. Also give advice on how to prepare certain foods.
+* Users will be able to upload their own images of their recipe.
+* Create a page where the best recipes will be made by the website team, displaying different techniques and equipments. Also give advice on how to prepare certain foods.
 
 ## Technologies Used
 
