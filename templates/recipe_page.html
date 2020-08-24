@@ -41,6 +41,9 @@
         <form action="{{url_for('insert_review', recipe_id=recipe._id)}}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12">
+                    <input id="recipe_id" name="recipe_id" type="hidden" value="{{recipe._id}}">
+                </div>
+                <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="user_name" name="user_name" type="text" class="validate">
                     <label for="icon_prefix">Name</label>
@@ -59,9 +62,12 @@
         </form>
     </div>
     <div class="row">
-        {% for review in reviews %} 
-            <p> <strong>{{ review.user_name }}</strong></p>
-            <p> {{ review.user_review }}</p>
+        {% for review in reviews %}
+            {% if review.recipe_id == recipe._id|string %} 
+                <p> <strong>{{ review.user_name }}</strong></p>
+                <p> {{ review.user_review }}</p>
+            {% else %}
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}

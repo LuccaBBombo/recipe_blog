@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type = "text/css"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
     <title>Document</title>
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     <script type="text/javascript">
@@ -17,7 +17,7 @@
     <header>
         <nav class="grey darken-2">
             <div class="nav-wrapper">
-            <a href="{{url_for('home')}}" class="brand-logo text-style ">YourCookBook</a>
+            <a href="{{url_for('home')}}" class="brand-logo text-logo">YourCookBook</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down navbar-links">
                 <li><a href="{{url_for('home')}}">Home</a></li>
                 <li><a href="{{url_for('recipes')}}">Recipes</a></li>

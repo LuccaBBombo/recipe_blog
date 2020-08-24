@@ -1,5 +1,5 @@
 function sendMail(contactForm) {
-    emailjs.send("l", "rrecipe_blog", {
+    emailjs.send("l", "recipe_blog", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
         "recipe_blog": contactForm.recipeblogconten.value
