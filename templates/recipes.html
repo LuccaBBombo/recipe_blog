@@ -1,35 +1,35 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="row">
+    <div class="row card-panel grey lighten-5">
         <form action="{{url_for('search')}}" method="POST" class="col s12">
             <div class="input-field col s12 m8">
-                <select name="query" id="query">
-                <option value="" disabled selected>Choose Recipe Category</option>
-                {% for cat in categories %}
-                    <option value="{{cat.category_name}}" >{{cat.category_name}}</option>
-                {% endfor %}
+                <select name="query" id="query" >
+                    <option value="" disabled selected>Choose recipe category</option>
+                    {% for cat in categories %}
+                        <option value="{{cat.category_name}}" >{{cat.category_name}}</option>
+                    {% endfor %}
                 </select>
-                <label for="query">Filter Recipes</label>
+                <label>Filter Recipes</label>
             </div>
             <div class="col s12 m4">
-                <a href="{{url_for('recipes')}}" class="grey btn text-shadow">Reset</a>
-                <button class="btn waves-effect waves-light deep-orange" type="submit" name="action">Submit
+                <a href="{{url_for('recipes')}}" class="grey btn text-shadow bttn_search">Reset</a>
+                <button class="btn waves-effect waves-light deep-orange bttn_search" type="submit" name="action">Submit
                 <i class="material-icons right">search</i>
                 </button>
             </div>
         </form>
-       </div> 
+    </div> 
     <div class="row">
         {% for recipe in recipes %}
             <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
                         <img src="{{url_for('static', filename='img/YourCookBookLogo.jpg')}}">
-                        <p class="card-title">{{recipe.recipe_title}}</p>
                     </div>
                     <div class="card-content">
-                        <p class ="callout">{{recipe.recipe_callout}}</p>
-                        <a href="{{url_for('show_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light deep-orange btn"><i class="material-icons right">chevron_right</i>Open Recipe</a>
+                        <p class="card-title"><strong>{{recipe.recipe_title}}</strong></p>
+                        <p class ="callout_text" >{{recipe.recipe_callout}}</p>
+                        <p><a href="{{url_for('show_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light deep-orange btn"><i class="material-icons right">chevron_right</i>Open Recipe</a></p>
                     </div>
                 </div>
             </div>

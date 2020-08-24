@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h3 class="text-bungee">Add your own recipe</h3>
+    <h3 class="text_bungee">Add your own recipe</h3>
+    <hr>
     <div class="row">
         <form action="{{url_for('insert_recipe')}}" method="POST">
             <div class="row">
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">create</i>
-                        <input type="text" class="validate" id="recipe_title" name="recipe_title" placeholder="Please provide the recipe name..." required="true">
-                        <label for="recipename">Recipe Name</label>
+                        <input type="text" class="validate" id="recipe_title" name="recipe_title" placeholder="Please provide the recipe name...">
+                        <label for="recipe_titl">Recipe Name</label>
                     </div>
                 </div>
                 <div class="row">
@@ -20,70 +21,50 @@
                                     <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                                 {% endfor %}
                         </select>
-                        <label>Recipe Category</label>
+                        <label for="category_name">Recipe Category</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">comment</i>
-                        <textarea class="validate" id="recipe_description" name="recipe_description" rows="2" placeholder="Please provide a brief recipe description..." required="true"></textarea>
-                        <label for="recipedescription">Recipe Description</label>
+                        <textarea class="validate" id="recipe_description" name="recipe_description" rows="2" placeholder="Please provide a brief recipe description including important details such as if the recipe is vegan, vegetarian..."></textarea>
+                        <label for="recipe_description">Recipe Description</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">short_text</i>
-                        <textarea class="validate" id="recipe_callout" name="recipe_callout" rows="2" placeholder="Please provide a brief introduction of your recipe" required="true"></textarea>
-                        <label for="recipedescription">Recipe Callout</label>
+                        <textarea class="validate" id="recipe_callout" name="recipe_callout" rows="2" placeholder="Please provide a brief introduction of your recipe" ></textarea>
+                        <label for="recipe_callout">Recipe Callout</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">view_list</i>
-                        <textarea class="validate" id="recipe_ingredients" name="recipe_ingredients" rows="4" placeholder="Please provide the recipe ingredients as the example so that it is formated correctly: 3 Eggs/400g of sugar/" required="true"></textarea>
+                        <textarea class="validate" id="recipe_ingredients" name="recipe_ingredients" rows="4" placeholder="Please provide the recipe ingredients as the example so that it is formated correctly: 3 Eggs/400g of sugar/" ></textarea>
                         <label for="recipe_ingredients">Ingredients</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">assignment</i>
-                        <textarea class="validate" id="recipe_prepare_method" name="recipe_prepare_method" rows="4" placeholder="Please provide the recipe cooking method as the example so that it can be separated in paragraphs : Put lightly salted water to boil/Let it heat for 10 minutes" required="true"></textarea>
-                        <label for="recipe_method">Cooking Method</label>
+                        <textarea class="validate" id="recipe_prepare_method" name="recipe_prepare_method" rows="4" placeholder="Please provide the recipe cooking method as the example so that it can be separated in paragraphs : Put lightly salted water to boil/Let it heat for 10 minutes" ></textarea>
+                        <label for="recipe_prepare_method">Cooking Method</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">query_builder</i>
-                        <input type="number" class="validate" id="recipe_cooking_time" name="recipe_cooking_time" placeholder="Please provide the preparation time in minutes(Ex:120)" required="true">
-                        <label for="recipetime">Preparation Time</label>
+                        <input type="number" class="validate" id="recipe_cooking_time" name="recipe_cooking_time" placeholder="Please provide the preparation time in minutes(Ex:120)" >
+                        <label for="recipe_cooking_time">Preparation Time</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="material-icons prefix">people</i>
-                        <input type="number" class="validate" id="recipe_serving" name="recipe_serving" placeholder="Please provide the number of people the recipe serves(Ex:5)" required="true">
-                        <label for="recipeservings">Recipe servings</label>
+                        <input type="number" class="validate" id="recipe_serving" name="recipe_serving" placeholder="Please provide the number of people the recipe serves(Ex:5)">
+                        <label for="recipe_serving">Recipe servings</label>
                     </div>
-                </div>
-                <div class="row">
-                    <p class ="col m4">
-                    <label>
-                    <input type="checkbox" id="is_vegan" name="is_vegan" />
-                    <span>Vegan</span>
-                    </label>
-                    </p>
-                    <p class ="col m4">
-                    <label>
-                    <input type="checkbox" id="is_vegetarian" name="is_vegetarian" />
-                    <span>Vegetarian</span>
-                    </label>
-                    </p>
-                    <p class ="col m4">
-                    <label>
-                    <input type="checkbox" id="is_gluten_free" name="is_gluten_free" />
-                    <span>Gluten Free</span>
-                    </label>
-                    </p>
                 </div>
                 <div class="row">
                 <button class="btn waves-effect waves-light deep-orange" type="submit" name="action">Add Recipe

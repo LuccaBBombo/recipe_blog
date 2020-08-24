@@ -1,13 +1,39 @@
-.text-bungee {
+/*Navbar and home page----------*/
+.text_bungee {
     font-family: 'Bungee Inline', cursive;
     color:#ff5722 ;
-};
-
-.callout{
-    margin-bottom: 6px;
+}
+.text_logo{
+    font-family: 'Bungee Inline', cursive;
 }
 
-.text-link{
-    color:#ff5722 ;
+.text_intro{
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    font-size: 25px;
 }
+
+.intro_icon{
+    font-size:50px;
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+/*Recipes----------*/
+.callout_text{
+    margin-bottom:10px;
+}
+
+.bttn_search{
+    margin-top: 22px;
+}
+/*Footer----------*/
+.text_link{
+    color:white;
+}
+
+.callout_text{
+    margin-bottom:10px;
+}
+
 

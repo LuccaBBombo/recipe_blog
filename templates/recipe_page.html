@@ -2,13 +2,12 @@
 {% block content %}
     <div class="row">
         <div class="row" >
-            <h2 class="text-bungee">{{ recipe.recipe_title }} </h2>
-            <hr>
-            
+            <h2 class="text_bungee">{{ recipe.recipe_title }} </h2>          
             <p>{{ recipe.recipe_description }} </p>
+            <hr>
         </div>
         <div class="row" >
-            <h3 class="text-bungee">Ingredients </h3>
+            <h3 class="text_bungee">Ingredients </h3>
             <hr>
             <ul>
             {% for ingredient in recipe_ingredients %} 
@@ -17,7 +16,7 @@
             </ul>
         </div>
         <div class="row" >
-            <h3 class="text-bungee">Cooking method</h3>
+            <h3 class="text_bungee">Cooking method</h3>
             <hr>
             {% for method in recipe_method %} 
                 <p> {{ method }}</p>
@@ -25,20 +24,18 @@
         </div>
         <div class="row" >
             <div class="col s12 m6">
-                <p class="text-bungee">Cooking time: </p><span>{{ recipe.recipe_cooking_time }} Minutes</span>
+                <p class="text_bungee">Cooking time: </p><span>{{ recipe.recipe_cooking_time }} Minutes</span>
             </div>
             <div class="col s12 m6">
-            <p class="text-bungee"> Servings:  </p> <span>{{ recipe.recipe_serving }} Portions</span>
+            <p class="text_bungee"> Servings:  </p> <span>{{ recipe.recipe_serving }} Portions</span>
             </div>
         </div>
-        <div class="row" >
-            <p>{{ recipe.is_vegan }}  {{ recipe.is_vegetarian }} {{ recipe.is_gluten_free }}</p>
-        </div>
     </div>
-    <div class="row center" >
-        <p>Want to share your thoughts on the recipe or give any ideas to your fellow food ethusiasts?</p>
+    <div class="row center text_bungee" >
+        <h3>Reviews</h3>
     </div>
     <div class="row">
+        <p class="center"><strong>Want to share your thoughts on the recipe or give any ideas to your fellow food ethusiasts?</strong></p>
         <form action="{{url_for('insert_review', recipe_id=recipe._id)}}" method="POST" class="col s12">
             <div class="row">
                 <div class="input-field col s12">
@@ -47,12 +44,12 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="user_name" name="user_name" type="text" class="validate">
-                    <label for="icon_prefix">Name</label>
+                    <label for="user_name">Name</label>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">comment</i>
                     <textarea id="user_review" name="user_review" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Write your review of the recipe...</label>
+                    <label for="user_review">Write your review of the recipe...</label>
                 </div>
                 <div class="row center">
                     <button class="btn waves-effect waves-light deep-orange" type="submit" name="action">Post Review
