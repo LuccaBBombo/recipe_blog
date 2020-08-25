@@ -35,15 +35,16 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
 
 ## Technologies Used
 
-[Python](https://www.python.org/)
+* [Python](https://www.python.org/)
 
-[JavaScript](https://www.javascript.com/)
+* [JavaScript](https://www.javascript.com/)
 
-[Flask](https://flask.palletsprojects.com/en/1.1.x/)
-
-[MongoDB](https://www.mongodb.com/)
-
-[JQuery](https://jquery.com/)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+    * The project uses Flask framework for its speed and simplicity for creating webpages.
+* [MongoDB](https://www.mongodb.com/)
+    * The project uses MongoDB as the website database.
+* [JQuery](https://jquery.com/)
+    * The project uses JQuery to simplify DOM manipulation.
 
 ### Testing
 
@@ -73,9 +74,9 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
 * The Python file was tested by direct input at the (extendsclass.com) file validator.
 * All the changes made to the code where added and committed with the correct commentaries.
 * To test the responsiveness of the website in phones, tablets, and desktops screens, I was used the Chrome Developer Tools, verifying how the site reacted in different screen sizes.
-
+* To locally run the code, verify that all the items listed inside the "requirements.txt file have been installed, there are no inputs required for the code to be able to run properly"
 ### Credits
 ### Acknowledgement
-Special thanks to all the team from Code Institute on helping me on this project.
+Special thanks to all the team from Code Institute on helping me on this project, tutors, mentors and also the students on the Slack community.
 
 

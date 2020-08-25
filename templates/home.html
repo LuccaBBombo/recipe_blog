@@ -1,28 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="row center grey lighten-2">  
-        <p class = "text_intro">We are here to help people all around the world to connect and share their food adventures 
-        with other food enthusiasts who are ready to try new and exciting recipes to cook for their friends and family.
+        <p class = "text_intro text_intro_mob">We are here to help people all around the world to connect and share their food adventures 
+        with other food enthusiasts who are ready to try new and exciting recipes to cook for friends and family.
         </p>
-        <p class = "text_intro">
+        <p class = "text_intro text_intro_mob">
         <strong>What are you waiting for? Let's get cooking!</strong>
         </p>
         <a href="{{url_for('recipes')}}" ><i class="material-icons prefix intro_icon">arrow_forward</i></a>
     </div>
     <hr>   
     <div class ="row center">
-        <h3 class="text_bungee">Contact Us</h3>
+        <h3 class="text_bungee header_mob ">Contact Us</h3>
         <p><strong>Hey there, want to contact us with any questions or doubts? Just send us a quick email</strong></p>
         <p><small>If there are any changes to be made on a recipe you posted, please contact us with the name of the recipe so we can help you get it sorted.</small></p>
         <div class="row">
             <form id="contactForm" class="col s12" >
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12 m6">
                         <i class="material-icons prefix">account_circle</i>
                         <input id="name" name="name" type="text" class="validate" required>
                         <label for="name">Name</label>
                     </div>
-                    <div class="input-field col s6">
+                    <div class="input-field col s12 m6">
                         <i class="material-icons prefix">email</i>
                         <input id="email" name="emailaddress" type="email" class="validate" required>
                         <label for="email">Email</label>

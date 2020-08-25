@@ -2,12 +2,12 @@
 {% block content %}
     <div class="row">
         <div class="row" >
-            <h2 class="text_bungee">{{ recipe.recipe_title }} </h2>          
+            <h2 class="text_bungee header_mob">{{ recipe.recipe_title }} </h2>          
             <p>{{ recipe.recipe_description }} </p>
             <hr>
         </div>
         <div class="row" >
-            <h3 class="text_bungee">Ingredients </h3>
+            <h3 class="text_bungee header_mob">Ingredients </h3>
             <hr>
             <ul>
             {% for ingredient in recipe_ingredients %} 
@@ -16,12 +16,13 @@
             </ul>
         </div>
         <div class="row" >
-            <h3 class="text_bungee">Cooking method</h3>
+            <h3 class="text_bungee header_mob">Cooking method</h3>
             <hr>
             {% for method in recipe_method %} 
                 <p> {{ method }}</p>
             {% endfor %}
         </div>
+        <hr>
         <div class="row" >
             <div class="col s12 m6">
                 <p class="text_bungee">Cooking time: </p><span>{{ recipe.recipe_cooking_time }} Minutes</span>
@@ -31,8 +32,9 @@
             </div>
         </div>
     </div>
-    <div class="row center text_bungee" >
-        <h3>Reviews</h3>
+    <hr>
+    <div class="row center" >
+        <h3 class="text_bungee header_mob">Reviews</h3>
     </div>
     <div class="row">
         <p class="center"><strong>Want to share your thoughts on the recipe or give any ideas to your fellow food ethusiasts?</strong></p>
@@ -64,6 +66,7 @@
             {% if review.recipe_id == recipe._id|string %} 
                 <p> <strong>{{ review.user_name }}</strong></p>
                 <p> {{ review.user_review }}</p>
+                <hr>
             {% else %}
             {% endif %}
         {% endfor %}

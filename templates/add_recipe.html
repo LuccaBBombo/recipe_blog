@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h3 class="text_bungee">Add your own recipe</h3>
+    <h3 class="text_bungee header_add">Add your own recipe</h3>
     <hr>
     <div class="row">
         <form action="{{url_for('insert_recipe')}}" method="POST">
             <div class="row">
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                         <i class="material-icons prefix">create</i>
                         <input type="text" class="validate" id="recipe_title" name="recipe_title" placeholder="Please provide the recipe name..." required>
                         <label for="recipe_titl">Recipe Name</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                         <i class="material-icons prefix">dehaze</i>
                         <select id="category_name" name="category_name" required>
                             <option value="" disabled selected>Choose Recipe Category</option>
