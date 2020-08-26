@@ -47,7 +47,8 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
     * The project uses JQuery to simplify DOM manipulation.
 
 ### Testing
-
+* The HTML and CSS files were tested by using the W3C Mark Validator Service by direct input of the files on the validator.
+* The Python file was tested by direct input at the (extendsclass.com) file validator.
 * The JavaScript files were tested using JSLint by direct input of the files on the validator.
 * To test the responsiveness of the website in phones, tablets, and desktops screens, I was used the Chrome Developer Tools, verifying how the site reacted in different screen sizes.
 1. Contact form
@@ -70,8 +71,6 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
     1. Try to submit the form with all inputs valid and verify that the form is sent and you are redirected to the 'Recipes' page. 
 
 ### Deployment
-* The HTML and CSS files were tested by using the W3C Mark Validator Service by direct input of the files on the validator.
-* The Python file was tested by direct input at the (extendsclass.com) file validator.
 * All the changes made to the code where added and committed with the correct commentaries.
 * To test the responsiveness of the website in phones, tablets, and desktops screens, I was used the Chrome Developer Tools, verifying how the site reacted in different screen sizes.
 * To locally run the code, verify that all the items listed inside the "requirements.txt file have been installed, there are no inputs required for the code to be able to run properly"
