@@ -70,11 +70,17 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
     1. Try to submit the form with an empty input field and verify that a relevant error message appears.
     1. Try to submit the form with all inputs valid and verify that the form is sent and you are redirected to the 'Recipes' page. 
 
+ ## Bugs
+ * Had an issue showing the reviews on the recipe-page that are only relevant to that recipe. Fixed it by passing the recipe._id and matching it with the review_id so that it displayed correctly.
+ * Had an issue with the filter function, it was not targeting the correct recipe.category_name, fixed it by moving the name and id of query to the select option instead of the child options displayed for selection.
+ * Having an issue setting up the emailJS on the home page to send the contact form. 
 ### Deployment
 * All the changes made to the code where added and committed with the correct commentaries.
 * To test the responsiveness of the website in phones, tablets, and desktops screens, I was used the Chrome Developer Tools, verifying how the site reacted in different screen sizes.
-* To locally run the code, verify that all the items listed inside the "requirements.txt file have been installed, there are no inputs required for the code to be able to run properly"
+* To locally run the code, verify that all the items listed inside the "requirements.txt" file have been installed, there are no inputs required for the code to be able to run properly.
+
 ### Credits
+Website was designed based on the lessons that I had in Code Institute.
 ### Acknowledgement
 Special thanks to all the team from Code Institute on helping me on this project, tutors, mentors and also the students on the Slack community.
 

@@ -7,6 +7,11 @@
     font-family: 'Bungee Inline', cursive;
 }
 
+.text-header-nav{
+    font-family: 'Bungee Inline', cursive;
+    margin-left:5px;
+}
+
 .text_link{
     text-decoration: none;
     color:white;
