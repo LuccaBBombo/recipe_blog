@@ -2,7 +2,7 @@ function sendMail(contactForm) {
     emailjs.send("lucca", "recipe_blog", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
-        "email_content ": contactForm.email_content.value
+        "recipe_blog_content": contactForm.recipeblogcontent.value
     })
     .then(
         function(response) {
