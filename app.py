@@ -9,8 +9,6 @@ app.config["MONGO_URI"] = os.environ['MONGO_URI']
 
 mongo = PyMongo(app)
 
-#---------------------Recipes--------------------------------------------
-
 
 @app.route('/')
 def home():
