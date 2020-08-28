@@ -81,6 +81,7 @@ We wish to have a communtiy of food enthusiasts who can give each other ideas, a
 
 ### Credits
 Website was designed based on the lessons that I had in Code Institute.
+* Example recipes added to live website were taken from 'allrecipes'
 ### Acknowledgement
 Special thanks to all the team from Code Institute on helping me on this project, tutors, mentors and also the students on the Slack community.
 
