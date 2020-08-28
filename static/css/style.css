@@ -18,16 +18,22 @@
 }
 
 .text_intro{
-    margin-left:10px;
+    margin-left:20px;
     margin-right:10px;
-    margin-top:10px;
-    font-size: 25px;
+    margin-top:15px;
+    font-size: 28px;
+    color: white;
 }
 
 .intro_icon{
     font-size:50px;
-    color: #ff5722;
+    color: white;
     margin-bottom: 15px;
+}
+
+.container-intro{
+    background: url('/static/img/salad.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /*Recipes----------*/

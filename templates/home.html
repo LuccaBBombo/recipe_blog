@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="row center grey lighten-2">  
+    <div class="row center container-intro">  
         <p class = "text_intro text_intro_mob">We are here to help people all around the world to connect and share their food adventures 
         with other food enthusiasts who are ready to try new and exciting recipes to cook for friends and family.
         </p>
@@ -15,29 +15,26 @@
         <p><strong>Hey there, want to contact us with any questions or doubts? Just send us a quick email</strong></p>
         <p><small>If there are any changes to be made on a recipe you posted, please contact us with the name of the recipe so we can help you get it sorted.</small></p>
         <div class="row col s12">
-            <form id="contactForm" onsubmit="return sendMail(this);" >
+            <form onsubmit="return sendMail(this);">
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="from_name" name="name" type="text" class="validate" required>
+                        <input id="name" name="name" type="text" class="validate" required>
                         <label for="from_name">Name</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">email</i>
-                        <input id="from_email" name="emailaddress" type="email" class="validate" required>
+                        <input id="emailaddress" name="emailaddress" type="email" class="validate" required>
                         <label for="emailaddress">Email</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">comment</i>
-                        <textarea id="recipeblogcontent" name="recipeblogcontent" class="materialize-textarea" required></textarea>
-                        <label for="recipe_blog_content">Write your message...</label>
+                        <textarea id="email_content" name="email_content" class="materialize-textarea" required></textarea>
+                        <label for="email_content">Write your message...</label>
                     </div>
-                </div>
-                    <div class="row center">
-                        <button class="btn waves-effect waves-light deep-orange" type="submit" name="action">Send Email
-                        <i class="material-icons right">send</i>
+                        <button class="btn waves-effect waves-light deep-orange" type="submit">Send Email<i class="material-icons right">send</i>
                         </button>
-                    </div>
+                </div>
             </form>
         </div>
     </div>

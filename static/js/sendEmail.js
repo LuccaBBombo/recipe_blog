@@ -1,8 +1,8 @@
 function sendMail(contactForm) {
-    emailjs.sendForm("l", "recipe_blog", {
+    emailjs.send("lucca", "recipe_blog", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
-        "recipe_blog_content": contactForm.recipeblogcontent.value
+        "email_content ": contactForm.email_content.value
     })
     .then(
         function(response) {
@@ -12,5 +12,5 @@ function sendMail(contactForm) {
             console.log("FAILED", error);
         }
     );
-    return false;  // To block from loading a new page
+    return false;  // Blocks from loading a new page
 }
